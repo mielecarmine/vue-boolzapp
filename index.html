@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/style.css" />
 
     <!-- Link Font Awesome -->
@@ -44,7 +51,7 @@
                 <i class="fa-solid fa-lg fa-ellipsis-vertical pointer"></i>
               </div>
             </div>
-            <div class="desktop-not d-flex gap-3 bg-info p-3">
+            <div class="desktop-not d-flex gap-3 bg-info p-2">
               <div
                 class="bell d-flex justify-content-center align-items-center p-2"
               >
@@ -82,8 +89,8 @@
                       src="./img/avatar_1.jpg"
                       alt="michele"
                     />
-                    <div class="d-flex flex-column">
-                      <span class="fs-5">Michele</span>
+                    <div class="d-flex flex-column align-self-start">
+                      <span class="fs-6">Michele</span>
                       <span class="span-small">Ultimo messaggio inviato</span>
                     </div>
                   </div>
@@ -94,7 +101,44 @@
           </div>
 
           <!-- FASCIA CHAT -->
-          <div class="chat"></div>
+          <div class="chat d-flex flex-column">
+            <div
+              class="info-contact p-2 d-flex justify-content-between align-items-center bg-secondary-subtle"
+            >
+              <div class="person d-flex">
+                <img src="./img/avatar_1.jpg" class="pointer" alt="io" />
+                <div class="d-flex flex-column ms-2">
+                  <span>Michele</span>
+                  <span class="span-small">Ultimo accesso oggi alle 12:00</span>
+                </div>
+              </div>
+              <div class="icons d-flex gap-3">
+                <i class="fa-solid fa-lg fa-magnifying-glass pointer"></i>
+                <i class="fa-solid fa-paperclip fa-lg pointer"></i>
+                <i class="fa-solid fa-lg fa-ellipsis-vertical pointer"></i>
+              </div>
+            </div>
+            <div class="message-zone d-flex flex-grow-1"></div>
+            <div
+              class="write-text d-flex gap-3 justify-content-between align-items-center p-3 bg-secondary-subtle"
+            >
+              <div class="p-2">
+                <i class="fa-regular fa-face-smile fa-lg pointer"></i>
+              </div>
+              <div class="input flex-grow-1">
+                <input
+                  type="text"
+                  class="form-control"
+                  aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-sm"
+                  placeholder="Scrivi un messaggio"
+                />
+              </div>
+              <div class="p-2">
+                <i class="fa-solid fa-microphone fa-lg"></i>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
