@@ -15,7 +15,7 @@
 }
 
 .person img {
-  width: 50px;
+  width: 40px;
   border-radius: 50%;
 }
 
@@ -28,4 +28,18 @@
 
 .desktop-not i {
   color: #0dcaf0;
+}
+
+.input-group-text {
+  cursor: pointer;
+}
+
+li img {
+  height: 50px;
+  width: 50px;
+}
+
+.span-small {
+  font-size: small;
+  color: rgb(160, 160, 160);
 }
