@@ -2,6 +2,10 @@
   border: 3px solid red;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 .wrapper {
   height: 100vh;
 }
@@ -28,10 +32,6 @@
 
 .desktop-not i {
   color: #0dcaf0;
-}
-
-.input-group-text {
-  cursor: pointer;
 }
 
 li img {
