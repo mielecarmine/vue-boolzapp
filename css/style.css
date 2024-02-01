@@ -1,0 +1,31 @@
+.bordered {
+  border: 3px solid red;
+}
+
+.wrapper {
+  height: 100vh;
+}
+
+.contacts {
+  width: 35%;
+}
+
+.chat {
+  width: 65%;
+}
+
+.person img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.bell {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.desktop-not i {
+  color: #0dcaf0;
+}
