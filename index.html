@@ -82,15 +82,18 @@
 
             <div class="people d-flex flex-column flex-grow-1 bg-light">
               <ul class="list-group">
-                <li class="list-group-item d-flex justify-content-between">
+                <li
+                  v-for="(person) in contacts"
+                  class="list-group-item d-flex justify-content-between"
+                >
                   <div class="d-flex gap-2">
                     <img
                       class="rounded-circle"
-                      src="./img/avatar_1.jpg"
+                      :src="person.avatar"
                       alt="michele"
                     />
                     <div class="d-flex flex-column align-self-start">
-                      <span class="fs-6">Michele</span>
+                      <span class="fs-6">{{ person.name }}</span>
                       <span class="span-small">Ultimo messaggio inviato</span>
                     </div>
                   </div>
