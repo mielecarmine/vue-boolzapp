@@ -167,12 +167,25 @@ const app = createApp({
         },
       ],
 
+      newMessage: {
+        date: "",
+        message: "",
+        status: "sent",
+      },
+
       activeContact: 0,
     };
   },
   methods: {
     goToChat(index) {
       this.activeContact = index;
+    },
+
+    sendText() {
+      const newMessageCopy = { ...this.newMessage };
+
+      this.contacts[this.activeContact].messages.push(newMessageCopy);
+      this.newMessage.message = "";
     },
   },
 

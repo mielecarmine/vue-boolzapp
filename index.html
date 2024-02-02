@@ -149,6 +149,8 @@
                   aria-label="Sizing example input"
                   aria-describedby="inputGroup-sizing-sm"
                   placeholder="Scrivi un messaggio"
+                  v-model.trim="newMessage.message"
+                  @keyup.enter="sendText(activeContact)"
                 />
               </div>
               <div class="p-2">
