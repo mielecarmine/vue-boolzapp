@@ -166,6 +166,8 @@ const app = createApp({
           ],
         },
       ],
+
+      activeContact: 0,
     };
   },
   methods: {},
