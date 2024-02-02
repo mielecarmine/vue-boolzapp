@@ -14,6 +14,10 @@ i {
   cursor: pointer;
 }
 
+.viewed {
+  background-color: #e9ebeb;
+}
+
 .wrapper {
   height: 100vh;
 }
@@ -80,4 +84,21 @@ li img {
 .received {
   background-color: white;
   align-self: start;
+}
+
+.list-element {
+  position: relative;
+  display: block;
+  padding: var(--bs-list-group-item-padding-y)
+    var(--bs-list-group-item-padding-x);
+  color: var(--bs-list-group-color);
+  text-decoration: none;
+
+  border: var(--bs-list-group-border-width) solid
+    var(--bs-list-group-border-color);
+}
+
+.list-element:hover,
+.viewed {
+  background-color: rgb(209, 209, 209);
 }

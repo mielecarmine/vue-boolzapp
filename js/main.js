@@ -170,7 +170,11 @@ const app = createApp({
       activeContact: 0,
     };
   },
-  methods: {},
+  methods: {
+    goToChat(index) {
+      this.activeContact = index;
+    },
+  },
 
   mounted() {},
 }).mount("#app");

@@ -83,8 +83,10 @@
             <div class="people d-flex flex-column flex-grow-1 bg-light">
               <ul class="list-group">
                 <li
-                  v-for="(person) in contacts"
-                  class="list-group-item d-flex justify-content-between"
+                  v-for="(person, index) in contacts"
+                  class="list-element d-flex justify-content-between"
+                  :class="index == activeContact ? 'viewed' : ''"
+                  @click="goToChat(index)"
                 >
                   <div class="d-flex gap-2">
                     <img
@@ -109,9 +111,13 @@
               class="info-contact p-2 d-flex justify-content-between align-items-center bg-secondary-subtle"
             >
               <div class="person d-flex">
-                <img src="./img/avatar_1.jpg" class="pointer" alt="io" />
+                <img
+                  :src="contacts[activeContact].avatar"
+                  class="pointer"
+                  alt="io"
+                />
                 <div class="d-flex flex-column ms-2">
-                  <span>Michele</span>
+                  <span>{{ contacts[activeContact].name }}</span>
                   <span class="span-small">Ultimo accesso oggi alle 12:00</span>
                 </div>
               </div>
