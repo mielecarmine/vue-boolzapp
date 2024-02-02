@@ -170,7 +170,7 @@ const app = createApp({
       newMessage: {
         date: "",
         message: "",
-        status: "sent",
+        status: "",
       },
 
       activeContact: 0,
@@ -184,9 +184,22 @@ const app = createApp({
     sendText() {
       const newMessageCopy = { ...this.newMessage };
 
+      newMessageCopy.status = "sent";
       this.contacts[this.activeContact].messages.push(newMessageCopy);
       this.newMessage.message = "";
+      setTimeout(this.reply, 1000);
     },
+
+    reply() {
+      const newMessageCopy = { ...this.newMessage };
+      newMessageCopy.status = "received";
+      newMessageCopy.message = "ok!";
+      this.contacts[this.activeContact].messages.push(newMessageCopy);
+    },
+
+    // delayedText() {
+    //   setTimeout(this.sendText, 1000);
+    // },
   },
 
   mounted() {},
