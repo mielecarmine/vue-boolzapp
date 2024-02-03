@@ -174,6 +174,7 @@ const app = createApp({
       },
 
       activeContact: 0,
+      search: "",
     };
   },
   methods: {
@@ -196,10 +197,16 @@ const app = createApp({
       newMessageCopy.message = "ok!";
       this.contacts[this.activeContact].messages.push(newMessageCopy);
     },
+  },
 
-    // delayedText() {
-    //   setTimeout(this.sendText, 1000);
-    // },
+  computed: {
+    searchContact() {
+      return this.contacts.filter((contact) => {
+        return (
+          contact.name.toLowerCase().indexOf(this.search.toLowerCase()) != -1
+        );
+      });
+    },
   },
 
   mounted() {},
