@@ -19,7 +19,7 @@ i {
 }
 
 .wrapper {
-  height: 100vh;
+  height: calc(100vh - 3rem);
 }
 
 .contacts {
