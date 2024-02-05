@@ -81,7 +81,9 @@
               </div>
             </div>
 
-            <div class="people d-flex flex-column flex-grow-1 bg-light">
+            <div
+              class="people overflow-scroll d-flex flex-column flex-grow-1 bg-light"
+            >
               <ul class="list-group">
                 <li
                   v-for="(person, index) in searchContact"
@@ -128,7 +130,9 @@
                 <i class="fa-solid fa-lg fa-ellipsis-vertical pointer"></i>
               </div>
             </div>
-            <div class="message-zone p-5 d-flex flex-column flex-grow-1">
+            <div
+              class="message-zone overflow-scroll p-5 d-flex flex-column flex-grow-1"
+            >
               <div
                 v-for="message in contacts[activeContact].messages"
                 class="message"
